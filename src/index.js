@@ -1,4 +1,15 @@
-let now = new Date();
+//Search Engine Functionality
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = searchInput.value;
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+/*let now = new Date();
 
 function formatDate(date) {
   let months = [
@@ -66,4 +77,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+celsiusLink.addEventListener("click", convertToCelsius);*/
