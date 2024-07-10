@@ -17,19 +17,20 @@
 <body>
     <div class="container">
         <div class="weather-app">
-            <form class="search-form" id="searchform" autocomplete="off">
-                <input type="text" id="search-input" placeholder="Type a city...">
+            <form>
+                <input type="search" placeholder="Enter a city..." required>
+                <input type="submit" value="Search">
             </form>
-            <h1>Taipei</h1>
+            <h1>Adelaide</h1>
             <div class="row">
                 <div class="col-6">
                     <h2>Mon, 20 Oct 16:00</h2>
                     <ul>
                         <li class="ultrabigtemp">
                             <span id="temperature">27</span>
-                            <span class="unit-c" id="celsius-link">°C</span>
+                            <span class="temp-unit" id="celsius-link">°C</span>
                             <span class="dash">|</span>
-                            <span class="unit-f" id="fahrenheit-link">°F</span>
+                            <span class="temp-unit" id="fahrenheit-link">°F</span>
                         </li>
                         <li class="sunny">
                             Sunny
