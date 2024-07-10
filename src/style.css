@@ -6,29 +6,53 @@ body {
 }
 
 .weather-app {
-    background: black;
+    background: #3864b3;
     padding: 25px;
-    margin: 30px auto;
+    margin: 18px auto;
     border-radius: 15px;
     max-width: 600px;
 }
 
-.search-form{
+.search-form-input{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    width: 79%;
+    padding: 4px 10px;
     font-size: 16px;
+    margin: 0 0 5px 10px;
+}
+
+.search-form-button{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4px 10px;
+    border: 0px;
+    border-radius: 5px;
+    color: #3864b3;
+    margin:0 0 0 2px;
+    font-size: 16px;
+}
+
+.weather-app-data{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bigrighticon{
+    font-size: 140px;
+    color: rgba(255, 255, 255, 0.7);
+    margin:25px 45px 0 0;
 }
 
 hr {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.bigrighticon {
-    font-size: 145px;
-    color: rgba(255, 255, 255, 0.7);
-}
 
 .ultrabigtemp {
-    font-size: 45px;
+    font-size: 30px;
     color: rgba(255, 255, 255, 0.9);
+    margin-left: 10px;
 }
 
 .temp-unit {
@@ -44,14 +68,15 @@ hr {
 }
 
 h1 {
-    font-size: 27px;
+    font-size: 30px;
     color: rgba(255, 255, 255, 0.8);
-    margin: 2px;
+    margin: 15px 0px 10px 10px;
 }
 
 h2 {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
+    margin: 0px 0px 0px 10px;
 }
 
 .hourlytempwholesection {
@@ -61,6 +86,7 @@ h2 {
 .weeklytempfullsection {
     font-size: 17px;
     line-height: 1.7;
+    margin: 0;
 }
 
 .hourlytimemini,
@@ -73,8 +99,12 @@ h2 {
 
 .hourlytempmini,
 .sunny {
-    font-size: 18px;
+    font-size: 17px;
     color: rgba(255, 255, 255, 0.9);
+}
+
+.sunny, .feelslike{
+    margin-left: 10px;
 }
 
 .daysoftheweek,
@@ -83,7 +113,7 @@ h2 {
 }
 
 .daysoftheweek {
-    margin-left: 15px;
+    margin-left: 0px;
 }
 
 .daysoftheweekicons {

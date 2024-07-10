@@ -17,13 +17,13 @@
 <body>
     <div class="container">
         <div class="weather-app">
-            <form>
-                <input type="search" placeholder="Enter a city..." required>
-                <input type="submit" value="Search">
+            <form class="search-form">
+                <input type="search" placeholder="Enter a city..." required class="search-form-input">
+                <input type="submit" value="Search" class="search-form-button">
             </form>
-            <h1>Adelaide</h1>
-            <div class="row">
-                <div class="col-6">
+            <div class="weather-app-data">
+                <div>
+                    <h1>Adelaide</h1>
                     <h2>Mon, 20 Oct 16:00</h2>
                     <ul>
                         <li class="ultrabigtemp">
@@ -40,10 +40,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-6">
+                <div class=weather-app-icon-container>
                     <span class="material-symbols-outlined bigrighticon">
                         sunny
-                    </span>
+                    </span> 
                 </div>
             </div>
             <hr />
