@@ -34,7 +34,12 @@
             <div class="weather-app-data">
                 <div>
                     <h1 id="city"></h1>
-                    <h2>Mon, 20 Oct 16:00</h2>
+                    <h2>
+                        <span id="main-day"></span>, 
+                        <span id="main-day-date"></span> 
+                        <span id="main-month"></span> 
+                        <span id="main-hour"></span>:<span id="main-minutes"></span>
+                    </h2>
                     <ul>
                         <li class="ultrabigtemp">
                             <span id="temperature"></span>
@@ -42,11 +47,11 @@
                             <span class="dash">|</span>
                             <span class="temp-unit" id="fahrenheit-link">°F</span>
                         </li>
-                        <li class="sunny">
-                            Sunny
+                        <li class="description">
+                            <span id="description"></span>
                         </li>
                         <li class="feelslike">
-                            Feels like 28°
+                            Feels like <span id="temp-feels-like"></span>°
                         </li>
                     </ul>
                 </div>

@@ -69,7 +69,7 @@ hr {
 
 h1 {
     font-size: 30px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin: 15px 0px 10px 10px;
 }
 
@@ -98,12 +98,12 @@ h2 {
 }
 
 .hourlytempmini,
-.sunny {
+.description {
     font-size: 17px;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.sunny, .feelslike{
+.description, .feelslike{
     margin-left: 10px;
 }
 
