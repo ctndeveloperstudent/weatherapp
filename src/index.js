@@ -68,10 +68,38 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+//Hourly Temperature Display function
+function displayForecast(){
+
+  let hours = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  hours.forEach(function (hour) {
+    forecastHtml = 
+      forecastHtml +
+      `
+      <div class="col-2">
+          <ul>
+              <li class="hourlytimemini">
+                  ${hour}
+              </li>
+              <li class="hourlytempmini">
+                  29°
+              </li>
+          </ul>
+      </div>
+    `;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
+let forecastElement = document.querySelector("#forecast");
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Town Hall")
+displayForecast()
 
 
 
