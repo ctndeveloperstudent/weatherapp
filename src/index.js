@@ -15,6 +15,9 @@ function refreshWeather(response) {
   let mainMonthElement = document.querySelector("#main-month");
   let mainHourElement = document.querySelector("#main-hour");
   let mainMinuteElement = document.querySelector("#main-minutes");
+  let iconElement = document.querySelector("#icon");
+
+  
 
   
   let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; //Array of day names
@@ -24,8 +27,7 @@ function refreshWeather(response) {
 ];
 
   //extract the date and time
-  let unixTimestamp = response.data.time; //extract the time property
-  let date = new Date(unixTimestamp * 1000); //convert to milliseconds
+  let date = new Date(response.data.time * 1000); //convert to milliseconds
   let dayIndex = date.getDay(); //convert to day
   let dayName = daysOfWeek[dayIndex];
   let day = date.getDate().toString().padStart(2, '0'); //convert to day number
@@ -35,8 +37,7 @@ function refreshWeather(response) {
   let minutes = date.getMinutes().toString().padStart(2, '0'); //convert to minutes
   
   
-
-  console.log(minutes);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
   mainMinuteElement.innerHTML = minutes;
   mainHourElement.innerHTML = hour;
   mainMonthElement.innerHTML = monthName;
