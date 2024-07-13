@@ -1,8 +1,6 @@
 //City and Temperature Functionality
 function refreshWeather(response) {
 
-  console.log(response.data.condition.icon_url);
-
   let temperatureElement = document.querySelector("#temperature") //Locate big temp on page
   let temperature = response.data.temperature.current; //inject big temp api
   let cityElement = document.querySelector("#city"); //locate city on page
@@ -16,8 +14,6 @@ function refreshWeather(response) {
   let mainHourElement = document.querySelector("#main-hour");
   let mainMinuteElement = document.querySelector("#main-minutes");
   let iconElement = document.querySelector("#icon");
-
-  
 
   
   let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; //Array of day names
@@ -49,6 +45,8 @@ function refreshWeather(response) {
   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
   .join(' ');
   temperatureElement.innerHTML = Math.round(temperature); //round up big temp
+
+  getForecast(response.data.city);
 }
 
 //Api Key and Url
@@ -68,8 +66,18 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-//Hourly Temperature Display function
-function displayForecast(){
+//Get forecast function
+function getForecast(city){
+  let apiKey = "1bf7247e8oed094td2f47e3a13b3fa79";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+
+//Display forecast function
+function displayForecast(response){
+  console.log(response.data)
 
   let hours = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
@@ -98,8 +106,7 @@ let forecastElement = document.querySelector("#forecast");
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Town Hall")
-displayForecast()
+searchCity("Town Hall");
 
 
 
