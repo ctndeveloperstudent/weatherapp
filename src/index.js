@@ -74,29 +74,40 @@ function getForecast(city){
   console.log(apiUrl);
 }
 
+//Acquire days of the week for the weekly forcast
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let days =["Sun","Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 
 //Display forecast function
 function displayForecast(response){
   console.log(response.data)
 
-  let hours = ["Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
-  hours.forEach(function (hour) {
+  response.data.daily.forEach(function (day, index) {
+    if (index > 0 && index < 7) {
     forecastHtml = 
       forecastHtml +
       `
       <div class="col-2">
           <ul>
-              <li class="hourlytimemini">
-                  ${hour}
+              <li class="weeklytimemini">
+                  ${formatDay(day.time)}
               </li>
-              <li class="hourlytempmini">
-                  29°
+              <li>
+                  <img src="${day.condition.icon_url}" class="weeklyiconmini"/>
+              </li>
+              <li class="weeklytempmini">
+                  ${Math.round(day.temperature.maximum)}°
               </li>
           </ul>
       </div>
     `;
+    }
   });
 
   forecastElement.innerHTML = forecastHtml;
@@ -106,7 +117,7 @@ let forecastElement = document.querySelector("#forecast");
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Town Hall");
+searchCity("Sydney");
 
 
 

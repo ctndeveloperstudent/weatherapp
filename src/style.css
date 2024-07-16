@@ -74,54 +74,36 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.7);
     margin: 0px 0px 0px 10px;
 }
 
-.hourlytempwholesection {
+.weeklytempwholesection {
     text-align: center;
 }
 
-.weeklytempfullsection {
-    font-size: 17px;
-    line-height: 1.7;
-    margin: 0;
-}
-
-.hourlytimemini,
-.feelslike,
-.daysoftheweekicons,
-.daysoftheweekfar {
-    font-size: 17px;
+.weeklytimemini,
+.feelslike{
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.4);
 }
 
-.hourlytempmini,
+.weeklytempmini,
 .description {
-    font-size: 17px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.9);
+}
+
+.weeklyiconmini{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
 }
 
 .description, .feelslike{
     margin-left: 10px;
-}
-
-.daysoftheweek,
-.daysoftheweekcel {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.daysoftheweek {
-    margin-left: 0px;
-}
-
-.daysoftheweekicons {
-    margin-left: 19px;
-}
-
-.daysoftheweekcel {
-    margin-left: -10px;
 }
 
 ul {
