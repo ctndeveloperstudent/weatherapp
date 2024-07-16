@@ -49,23 +49,17 @@ hr {
 }
 
 
-.ultrabigtemp {
+.ultrabigtemp, .temp-unit {
     font-size: 30px;
     color: rgba(255, 255, 255, 0.9);
     margin-left: 10px;
 }
 
 .temp-unit {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.9);
-    margin-right: 0px;
+    font-size: 20px;
+    margin:0;
 }
 
-.dash {
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0px;
-}
 
 h1 {
     font-size: 40px;
