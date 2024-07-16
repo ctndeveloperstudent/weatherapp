@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-    background-color: #3864b3;
+    background-color: #4e78c7;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .weather-app {
-    background: #3864b3;
-    padding: 25px;
-    margin: 18px auto;
-    border-radius: 15px;
+    background-color: #3864b3;
+    padding: 30px;
+    margin: 70px auto;
+    border-radius: 10px;
     max-width: 600px;
 }
 
@@ -17,10 +17,10 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
     border-radius: 5px;
-    width: 79%;
+    width: 77%;
     padding: 4px 10px;
-    font-size: 16px;
-    margin: 0 0 5px 10px;
+    font-size: 18px;
+    margin: 15px 0 15px 10px;
 }
 
 .search-form-button{
@@ -30,7 +30,7 @@ body {
     border-radius: 5px;
     color: #3864b3;
     margin:0 0 0 2px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .weather-app-data{
@@ -39,13 +39,13 @@ body {
 }
 
 .weather-app-icon{
-    margin:0px 55px 0 0;
+    margin:0px 50px 0 0;
     width: 200px;
     height: 200px;
 }
 
 hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 
@@ -68,7 +68,7 @@ hr {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
     color: rgba(255, 255, 255, 0.9);
     margin: 15px 0px 10px 10px;
 }
@@ -92,7 +92,7 @@ h2 {
 .weeklytempmini,
 .description {
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .weeklyiconmini{
